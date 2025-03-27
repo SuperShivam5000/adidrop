@@ -1,0 +1,9 @@
+{
+  "appId": "com.adi.adidrop",
+  "appName": "AdiDrop",
+  "webDir": "public",
+  "server": {
+    "url": "https://adidrop.onrender.com/",
+    "cleartext": true
+  }
+}
