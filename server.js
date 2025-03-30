@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs')
 //Home route
 app.get('/', async (req,res)=>{
-    res.sendFile(__dirname + '/public/frontend/index.html');
+    res.render('homepage');
 });
 //Other routes
 app.use('/api/files', require('./routes/files'));
