@@ -12,22 +12,30 @@
 </head>
 
 <body>
-    <img src="/img/logo.png" alt="AdiDrop logo" class="logo">
+    <a href="/">
+        <img src="/img/logo.png" alt="AdiDrop logo" class="logo">
+    </a>
 
     <section class="download">
         <img class="download__icon" src="/img/download-sd.svg" alt="adidrop-download">
         <% if(locals.error){ %>
-        <h4><%= locals.error %> 😏</h4>
-        <% } else { %>
-        <h2>Your file is ready to download</h2>
-        <div class="download__meta">
-            <h4><%= fileName %></h4>
-            <small><%= parseInt(fileSize/1000) %> KB</small>
-        </div>
-        <div class="send-btn-container">
-            <a href="<%= downloadLink %>">Download file</a>
-        </div>
-        <% } %>
+            <h4>
+                <%= locals.error %> 😏
+            </h4>
+            <% } else { %>
+                <h2>Your file is ready to download</h2>
+                <div class="download__meta">
+                    <h4>
+                        <%= fileName %>
+                    </h4>
+                    <small>
+                        <%= parseInt(fileSize/1000) %> KB
+                    </small>
+                </div>
+                <div class="send-btn-container">
+                    <a href="<%= downloadLink %>">Download file</a>
+                </div>
+                <% } %>
     </section>
 </body>
 
